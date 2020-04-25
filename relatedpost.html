@@ -13,14 +13,16 @@
     margin: 0;
     font-family: -apple-system,BlinkMacSystemFont,Roboto,"Segoe UI",Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
     height: 210px;
-    width:810px;
+    width:100%;
+       display:flex;
   }
     
     body li,
     body ul {
         margin: 0;
         float: left;
-      margin-right:10px
+      margin-right:10px;
+       display:flex;
     }
     
     body li {
@@ -65,9 +67,8 @@
     .relinkjdulx {
         font-size: 11px;
         margin-bottom: 5px;
-      font-weight:400;
     }
-  .linkjudul{margin:105px 10px 10px}
+  .linkjudul{10px 10px}
     
     @media only screen and (max-width:600px) {
         span.news-text {
@@ -129,7 +130,7 @@
                     o = relgambar[a];
                 reljudul[a] = reljudul[n], relurls[a] = relurls[n], relcuplikan[a] = relcuplikan[n], relgambar[a] = relgambar[n], reljudul[n] = u, relurls[n] = i, relcuplikan[n] = s, relgambar[n] = o
             }
-            for (var g, m = 0, c = Math.floor((reljudul.length - 1) * Math.random()), p = c, d = getQueryVariable("pos"); relmaxtampil > m && (relurls[c] == d || (g = "<li class='news-title'>", g += "<a href='" + relurls[c] + "' rel='nofollow' target='_blank' title='" + reljudul[c] + "'><img src='" + relgambar[c] + "' /></a>", g += "<div class='linkjudul'><a class='relinkjdulx' href='" + relurls[c] + "' target='_blank'>" + reljudul[c] + "</a></div>", g += "<span class='news-text'>" + relcuplikan[c] + " ... </span>", g += "</li>", document.write(g), ++m != relmaxtampil)) && (c < reljudul.length - 1 ? c++ : c = 0, c != p););
+            for (var g, m = 0, c = Math.floor((reljudul.length - 1) * Math.random()), p = c, d = getQueryVariable("pos"); relmaxtampil > m && (relurls[c] == d || (g = "<li class='news-title'>", g += "<a class='img-link' href='" + relurls[c] + "' rel='nofollow' target='_blank' title='" + reljudul[c] + "'><img src='" + relgambar[c] + "' /></a>", g += "<div class='linkjudul'><a class='relinkjdulx' href='" + relurls[c] + "' target='_blank'>" + reljudul[c] + "</a></div>", g += "<span class='news-text'>" + relcuplikan[c] + " ... </span>", g += "</li>", document.write(g), ++m != relmaxtampil)) && (c < reljudul.length - 1 ? c++ : c = 0, c != p););
         }
         for (var simg = getQueryVariable("si"), rsimg = 0 == simg ? "/s72-c/" : "/" + simg + "/", labels = getQueryVariable("labels"), relmaxtampil = getQueryVariable("num"), url = getQueryVariable("url"), hostname = 0 == url ? "https://www.mankoin.blog" : url, res = labels.split(","), i = 0, text = ""; res[i];) text += '<script src="' + hostname + "/feeds/posts/default/-/" + res[i] + '?alt=json&amp;callback=relpostimgcuplik&amp;max-results=50"><\/script>', i++;
         var relnojudul = 0,
